@@ -1,130 +1,135 @@
-# RooFi - Simple WiFi Manager
+# RooFi - Advanced WiFi Manager via CLI
+
+![RooFi Logo](https://raw.githubusercontent.com/bidhata/RooFi/main/assets/logo.png)
 
 **Author:** [@bidhata](https://github.com/bidhata)  
+**Version:** 2.2  
+**Email:** me@krishnendu.com  
 
-RooFi is a **lightweight WiFi manager for Linux** that lets you easily scan, connect, and manage WiFi networks from the **terminal**. Perfect for Raspberry Pi, headless systems, or anyone who prefers the command line over bulky GUI tools.  
+---
+
+## 📌 Overview
+When working with remote shells or minimal Linux setups, managing WiFi through the command line can be frustrating. **RooFi** solves this problem by providing a **colorful, interactive, menu-driven WiFi manager** built on top of `nmcli`.
+
+With RooFi, you don’t need to remember long `nmcli` commands. Instead, you get a clean CLI interface with signal bars, connection info, and simple options to control your WiFi.
 
 ---
 
 ## ✨ Features
-- 📡 Scan available WiFi networks  
-- 🔑 Connect to WiFi with SSID + password  
-- 🔌 Disconnect from WiFi  
-- 📋 View current connection status  
-- ⚡ Works without a desktop environment  
-
----
-
-## 📦 Requirements
-- Linux system with WiFi support  
-- `bash` shell  
-- [`nmcli`](https://developer.gnome.org/NetworkManager/stable/nmcli.html) (usually comes pre-installed with NetworkManager)  
-
-Check if `nmcli` is installed:
-```bash
-nmcli --version
-```
-If not installed, you can add it (Debian/Ubuntu):
-```bash
-sudo apt install network-manager
-```
+- 🔍 **Scan & list available WiFi networks** with colored **signal strength bars** (Red = weak, Yellow = medium, Green = strong).
+- 🔑 **Connect to networks** (prompts for password if required).
+- 📶 **Show current connection details** (SSID, IP, device).
+- 🔄 **Auto-detect wireless interface** (works with `nmcli` or `iw`).
+- ❌ **Disconnect from WiFi** instantly.
+- 🗑 **Forget/remove saved networks** easily.
+- 🔁 **Auto reconnect option** for seamless switching.
+- 🎨 **Beautiful, colorful ASCII menu UI** (works even in SSH/TTY sessions).
+- 🖥 **Lightweight Bash script** — no dependencies except NetworkManager.
 
 ---
 
 ## 🚀 Installation
+Clone the repository and give execution permission:
 
-Clone the repository:
 ```bash
+# Clone RooFi
 git clone https://github.com/bidhata/RooFi.git
 cd RooFi
-```
 
-Make the script executable:
-```bash
+# Make script executable
 chmod +x RooFi.sh
 ```
 
-Run it:
+For system-wide use, move it to `/usr/local/bin`:
+
+```bash
+sudo mv RooFi.sh /usr/local/bin/roofi
+```
+
+Now you can run it anywhere by typing:
+
+```bash
+roofi
+```
+
+---
+
+## ⚡ Usage
+Run the script:
+
 ```bash
 ./RooFi.sh
 ```
 
----
+Or (if installed system-wide):
 
-## 🖥️ Usage
-
-When you run RooFi, you’ll see a simple menu:
-
-```
-=========================
- RooFi - WiFi Manager
-=========================
-1. Scan WiFi Networks
-2. Connect to WiFi
-3. Disconnect WiFi
-4. Show Current Connection
-5. Exit
+```bash
+roofi
 ```
 
----
-
-## 🎬 Demo Walkthrough (ASCII Example)
+You will see a colorful interactive menu like this:
 
 ```
-$ ./RooFi.sh
+╔═══════════════════════════════════════════════════════╗
+║                RooFi WiFi Manager v2.2               ║
+║           Author: Krishnendu Paul @bidhata           ║
+╚═══════════════════════════════════════════════════════╝
 
-=========================
- RooFi - WiFi Manager
-=========================
-1. Scan WiFi Networks
-2. Connect to WiFi
-3. Disconnect WiFi
-4. Show Current Connection
-5. Exit
-Enter choice: 1
+1) Scan & List Networks
+2) Connect to WiFi
+3) Show Current Connection
+4) Disconnect
+5) Forget Saved Network
+6) Auto Reconnect
+7) Exit
+```
 
-Scanning for WiFi networks...
+Just choose an option and follow the prompts.
 
-SSID            SIGNAL   SECURITY
-Home_Network    85%      WPA2
-Cafe_WiFi       65%      WPA
-Open_Network    40%      --
+When scanning networks, RooFi shows signal strength like this:
 
-=========================
-1. Scan WiFi Networks
-2. Connect to WiFi
-3. Disconnect WiFi
-4. Show Current Connection
-5. Exit
-Enter choice: 2
-
-Enter WiFi SSID: Home_Network
-Enter Password: ********
-
-[✔] Successfully connected to Home_Network!
-
-=========================
-1. Scan WiFi Networks
-2. Connect to WiFi
-3. Disconnect WiFi
-4. Show Current Connection
-5. Exit
-Enter choice: 4
-
-Currently connected to: Home_Network
+```
+MyWiFiNetwork   ████████░░  80%
+OtherNetwork    ████░░░░░░  40%
 ```
 
 ---
 
-## 🤝 Contributing
+## 📷 Demo
+*(Add a GIF or screenshot here of RooFi in action)*
 
-Want to improve RooFi?  
-- Fork the repo  
-- Make your changes  
-- Open a pull request 🚀  
+---
+
+## 🔧 Requirements
+- Linux system with **NetworkManager** installed
+- `nmcli` command available
+- Bash shell environment
+
+---
+
+## 🛠 Troubleshooting
+- Ensure `NetworkManager` service is running:
+  ```bash
+  sudo systemctl status NetworkManager
+  ```
+- If RooFi cannot detect your WiFi interface, check with:
+  ```bash
+  nmcli device
+  iw dev
+  ```
+- Run with `sudo` if you lack permission to manage WiFi.
 
 ---
 
 ## 📜 License
+This project is licensed under the **MIT License**.
 
-This project is licensed under the GPL 2.  
+---
+
+## ❤️ Acknowledgments
+RooFi was born out of frustration while managing WiFi over SSH and TTY sessions.  
+Hopefully, it makes your CLI WiFi management **simple and beautiful**!
+
+---
+
+👉 [Visit the Repository](https://github.com/bidhata/RooFi)
