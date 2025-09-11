@@ -1,6 +1,10 @@
 # RooFi - Advanced WiFi Manager via CLI
 
-![RooFi Logo](https://raw.githubusercontent.com/bidhata/RooFi/main/assets/logo.png)
+```text
+ ____   __    __  ____  __  
+(  _ \ /  \  /  \(  __)(  ) 
+ )   /(  O )(  O )) _)  )(  
+(__\_) \__/  \__/(__)  (__) 
 
 **Author:** [@bidhata](https://github.com/bidhata)  
 **Version:** 2.2  
@@ -32,6 +36,9 @@ With RooFi, you don’t need to remember long `nmcli` commands. Instead, you get
 Clone the repository and give execution permission:
 
 ```bash
+#Install Packages
+sudo apt-get install network-manager iw
+
 # Clone RooFi
 git clone https://github.com/bidhata/RooFi.git
 cd RooFi
@@ -73,15 +80,28 @@ You will see a colorful interactive menu like this:
 ╔═══════════════════════════════════════════════════════╗
 ║                RooFi WiFi Manager v2.2               ║
 ║           Author: Krishnendu Paul @bidhata           ║
+║           Email: me@krishnendu.com                  ║
 ╚═══════════════════════════════════════════════════════╝
 
-1) Scan & List Networks
-2) Connect to WiFi
-3) Show Current Connection
-4) Disconnect
-5) Forget Saved Network
-6) Auto Reconnect
-7) Exit
+Interface: wlan0 | Status: enabled
+═══════════════════════════════════════════════════════
+Main Menu
+───────────────────────────────────────────────────────
+1) Show WiFi Status
+2) List Available Networks
+3) Connect to Network
+4) Disconnect from Network
+5) Show Saved Networks
+6) Turn WiFi On/Off
+7) Show Network Details
+8) Power Management
+9) Advanced Options
+10) Hotspot
+11) Exit
+───────────────────────────────────────────────────────
+
+Select option (1-11): 
+
 ```
 
 Just choose an option and follow the prompts.
@@ -95,10 +115,6 @@ OtherNetwork    ████░░░░░░  40%
 
 ---
 
-## 📷 Demo
-*(Add a GIF or screenshot here of RooFi in action)*
-
----
 
 ## 🔧 Requirements
 - Linux system with **NetworkManager** installed
@@ -122,7 +138,7 @@ OtherNetwork    ████░░░░░░  40%
 ---
 
 ## 📜 License
-This project is licensed under the **MIT License**.
+This project is licensed under the **GNU GPL 2.0**.
 
 ---
 
