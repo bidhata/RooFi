@@ -13,9 +13,11 @@
 ---
 
 ## 📌 Overview
-When working with remote shells or minimal Linux setups, managing WiFi through the command line can be frustrating. **RooFi** solves this problem by providing a **colorful, interactive, menu-driven WiFi manager** built on top of `nmcli`.
+When working with remote shells or minimal Linux setups, managing WiFi through the command line can be frustrating.
+**RooFi** solves this problem by providing a **colorful, interactive, menu-driven WiFi manager** built on top of `nmcli`.
 
-With RooFi, you don’t need to remember long `nmcli` commands. Instead, you get a clean CLI interface with signal bars, connection info, and simple options to control your WiFi.
+With RooFi, you don’t need to remember long `nmcli` commands. Instead, you get a clean CLI interface with signal bars,
+connection info, and simple options to control your WiFi.
 
 ---
 
