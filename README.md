@@ -322,7 +322,7 @@ chmod 644 ~/.config/roofi/history
 
 ## 📋 Changelog
 
-### Version 3.1 (March 2024)
+### Version 3.1 (March 2026)
 
 **Added:**
 - Command-line interface with 8 commands
@@ -337,7 +337,7 @@ chmod 644 ~/.config/roofi/history
 - Enhanced network listing with frequency/quality
 - Improved interface detection
 
-### Version 3.0 (2024)
+### Version 3.0 (2026)
 
 **Added:**
 - OpenWrt support (uci/iwinfo backend)
